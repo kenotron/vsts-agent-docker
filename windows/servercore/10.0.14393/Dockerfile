@@ -10,14 +10,9 @@ RUN choco config set cachelocation C:\chococache
 RUN choco install \
     git  \
     nodejs \
-    --confirm \
-    --limit-output \
-    --timeout 216000 \
-    && rmdir /S /Q C:\chococache
-   # choco install visualstudio2015community --confirm --timeout 216000 \
-
-RUN choco install \
+    python2 \
     visualstudio2017buildtools \
+    visualstudio2017-workload-vctools \
     --package-parameters "--passive --locale en-US --includeOptional" \
     --confirm \
     --limit-output \
